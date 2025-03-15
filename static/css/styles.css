@@ -1,0 +1,289 @@
+/* static/css/styles.css */
+
+
+
+/*index.html*/
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(135deg, #333, #555);
+    color: #fff;
+    padding: 01px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #634444;
+    padding: 10px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+.search-container {
+    margin: 20px auto;
+    text-align: right;
+}
+
+.search-container input {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #2ed573;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    background-color: #2ed573;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #25a25a;
+}
+
+.restaurant-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.restaurant-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin: 15px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.restaurant-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #2ed573;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.restaurant-card img:hover {
+    transform: scale(1.1);
+    border-color: #ff4757;
+}
+
+.restaurant-card h3 {
+    margin: 15px 0 0;
+    font-size: 18px;
+    color: #333;
+}
+
+
+
+
+/* styles of food.html */
+.gallery {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to the next row */
+    gap: 40px; /* Increased space between videos */
+    justify-content: center; /* Center-align the videos */
+}
+
+.tutorial {
+    flex: 1 1 calc(33.33% - 40px); /* 3 videos per row with spacing */
+    max-width: calc(33.33% - 40px); /* Maximum width for each video */
+    margin-bottom: 20px; /* Space between rows */
+    text-align: center; /* Center-align the content */
+}
+
+.tutorial video {
+    width: 100%; /* Full width of the container */
+    height: 250px; /* Increased height for better visibility */
+    border: 3px solid #2ed573; /* Green border */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    object-fit: cover; /* Ensures the video covers the area without distortion */
+}
+
+.tutorial video:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    border-color: #ff4757; /* Red border on hover */
+}
+
+.tutorial h3 {
+    margin: 15px 0 10px;
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.tutorial p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .tutorial {
+        flex: 1 1 calc(50% - 20px); /* 2 videos per row on smaller screens */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .tutorial {
+        flex: 1 1 100%; /* 1 video per row on mobile screens */
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+/* About and Contact Page Styles */
+
+
+.container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Limit width for better readability */
+    margin: 20px auto; /* Center the container */
+}
+
+.container h2 {
+    color: #333;
+    border-bottom: 2px solid #2ed573; /* Green underline */
+    padding-bottom: 10px;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.container p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.container ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.container ul li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Contact Page Specific Styles */
+.contact-info {
+    margin-bottom: 30px;
+}
+
+.contact-info h3 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.contact-form {
+    margin-top: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #2ed573; /* Green border on focus */
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 150px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #2ed573; /* Green button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #25a25a; /* Darker green on hover */
+}

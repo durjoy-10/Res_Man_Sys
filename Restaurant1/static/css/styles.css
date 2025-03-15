@@ -1,0 +1,299 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+header {
+    background: linear-gradient(135deg, #333, #555);
+    color: #fff;
+    padding: 1px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 40px; 
+    font-weight: bold; 
+    color: #c7911e; 
+    text-align: center; 
+    padding: 20px; 
+    margin: 0; 
+    border-radius: 10px; 
+    text-transform: uppercase; 
+    width: 100%; 
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #634444;
+    padding: 10px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #ff6f61;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.offers-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.offers-list li {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-left: 5px solid #ff6f61;
+    font-size: 1.1em;
+}
+
+/* Food Section Styles */
+.food-section {
+    margin-bottom: 40px;
+    padding: 40px 20px; /* Increased padding for better spacing */
+    background: linear-gradient(135deg, #ffffff, #f9f9f9); /* Light gradient background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center-align text */
+}
+
+.food-section h2 {
+    color: #ff6f61; /* Vibrant heading color */
+    font-size: 2.5em; /* Larger font size */
+    margin-bottom: 30px; /* Increased margin for spacing */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2px; /* Add letter spacing for better readability */
+    position: relative; /* For pseudo-element styling */
+}
+
+.food-section h2::after {
+    content: '';
+    display: block;
+    width: 60px; /* Width of the underline */
+    height: 4px; /* Thickness of the underline */
+    background-color: #ff6f61; /* Color of the underline */
+    margin: 10px auto 0; /* Center the underline */
+    border-radius: 2px; /* Rounded corners for the underline */
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center items horizontally */
+    max-width: 1200px; /* Limit container width */
+    margin: 0 auto; /* Center the container */
+}
+
+.menu-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    width: calc(25% - 20px); /* Adjust width for responsiveness */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+    padding: 15px; /* Add padding for spacing */
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0; /* Rounded corners for the top of the image */
+}
+
+.menu-item h3 {
+    margin: 15px 0 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.menu-item p {
+    color: #777;
+    font-size: 1.2em;
+    margin-bottom: 15px; /* Add margin for spacing */
+}
+
+.buy-button {
+    display: inline-block;
+    width: auto; /* Auto width for button-like appearance */
+    padding: 10px 20px; /* Adjust padding for better button shape */
+    background-color: #ff6f61; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.1em; /* Font size */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline (for <a> tags) */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    margin-top: auto; /* Push button to the bottom */
+}
+
+.buy-button:hover {
+    background-color: #ff3b2f; /* Darker background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.buy-button:active {
+    transform: scale(0.95); /* Slightly shrink on click */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .menu-item {
+        width: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-item {
+        width: 100%;
+    }
+}
+
+/* Order form style */
+.order {
+    max-width: 400px; /* Smaller form width */
+    width: 100%;
+    padding: 15px; /* Reduced padding */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 80px; /* Space for the fixed header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto; /* Adjust height automatically */
+    min-height: 300px; /* Reduced height */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2ed573; /* Green border on focus */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 100px;
+}
+
+.confirm-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #2ed573; /* Green button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.confirm-button:hover {
+    background-color: #25a25a; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.aco {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Limit width for better readability */
+    margin: 20px auto; /* Center the container */
+}
+
+.aco h2 {
+    color: #333;
+    border-bottom: 2px solid #2ed573; /* Green underline */
+    padding-bottom: 10px;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.aco p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.aco ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.aco ul li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
